@@ -1,0 +1,278 @@
+{
+    "events": [
+       { 
+            "media": {
+                "url": "https://gallica.bnf.fr/ark:/12148/btv1b90076313/f3.jpeg",
+                "thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b90076313/f3.jpeg"
+            },
+            "start_date": {
+                "day": "31",
+                "month": "1",
+                "year": "1538"
+            },
+            "display_date": "January 31st, 1538",
+            "text": {
+                "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/tillet-en/' style='color:#ffffe'>To Louis du Tillet</a>",
+                "text": "<p>Jean Calvin's reply to Louis de Tillet after receiving his letter informing him of his decision to return to the catholic faith.</p>"
+            },
+            "background":{
+                "url":"https://gallica.bnf.fr/ark:/12148/btv1b90076313/f3.jpeg",
+                "color": "#5e5e52"
+            }
+       },
+       { 
+        "media": {
+            "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fcorrespondance_ecclesiastiqueead%252Fms_fr_401%252Fms_fr_00401_f017_01.jpg",
+            "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fcorrespondance_ecclesiastiqueead%252Fms_fr_401%252Fms_fr_00401_f017_01.jpg"
+        },
+        "start_date": {
+            "day": "19",
+            "month": "2",
+            "year": "1541"
+        },
+        "display_date": "February 19th, 1541",
+        "text": {
+            "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/lords-geneva-1541/' style='color:#ffffe'>To the Seigneury of Geneva</a>",
+            "text": "<p>In the context of the Diet of Regensburg, which was an important theological debate between catholics and protestants, John Calvin, after being called by William Farel to return to Geneva, explains the reasons of his belated arrival and reiterates his engagement with the church.</p>"
+        },
+        "background":{
+            "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fcorrespondance_ecclesiastiqueead%252Fms_fr_401%252Fms_fr_00401_f017_01.jpg",
+            "color": "#5e5e52"
+        }
+   },
+   { 
+    "media": {
+        "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_145%252Fms_fr_00145_f157r.jpg",
+        "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_145%252Fms_fr_00145_f157r.jpg"
+    },
+    "start_date": {
+        "day": "29",
+        "month": "9",
+        "year": "1541"
+    },
+    "display_date": "September 29th, 1541",
+    "text": {
+        "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/lords-neuchatel-1541/' style='color:#ffffe'>To the Seigneury of Neuchâtel</a>",
+        "text": "<p>Letter on behalf of the ministers of Geneva, including Calvin, addressed to those of Nauchâtel to persuade them of not deposing William Farel after he publicly censured a lady of importance. This letter was carried by Pierre Viret and containes instructions from Calvin for his intervention before the seigneury of Neuchâtel.</p>"
+    },
+    "background":{
+        "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_145%252Fms_fr_00145_f157r.jpg",
+        "color": "#5e5e52"
+    } 
+},
+{ 
+    "media": {
+        "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_196%252Fms_fr_00196_f079r.jpg",
+        "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_196%252Fms_fr_00196_f079r.jpg"
+    },
+    "start_date": {
+        "month": "10",
+        "year": "1541"
+    },
+    "display_date": "October 1541",
+    "text": {
+        "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/duchess-ferrara-1541/' style='color:#ffffe'>To the duchess of Ferrara</a>",
+        "text": "<p>Calvin insructs on the mistakes of the Mass.</p>"
+    },
+    "background":{
+        "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_196%252Fms_fr_00196_f079r.jpg",
+        "color": "#5e5e52"
+    } 
+},
+{ 
+    "media": {
+        "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107a_volume_2%252Fms_lat_107a_02_f369r.jpg",
+        "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107a_volume_2%252Fms_lat_107a_02_f369r.jpg"
+    },
+    "start_date": {
+        "month": "5",
+        "year": "1542"
+    },
+    "display_date": "May 1542",
+    "text": {
+        "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/bishop-may-1542/' style='color:#ffffe'>To Mister the bishop of *</a>",
+        "text": "<p>Defense of the doctrine of the Reformed church against the accusations of being the cause of the plague at Geneva.<br/>Instruction to seek only God for deliverance.</p>"
+    },
+    "background":{
+        "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107a_volume_2%252Fms_lat_107a_02_f369r.jpg",
+        "color": "#5e5e52"
+    } 
+},
+{ 
+    "media": {
+        "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f001r.jpg",
+        "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f001r.jpg"
+    },
+    "start_date": {
+        "day": "14",
+        "month": "10",
+        "year": "1543"
+    },
+    "display_date": "October 14th, 1543",
+    "text": {
+        "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/de-falais-oct-1543/' style='color:#ffffe'>To Mister de Falais</a>",
+        "text": "<p>Calvin gives his advice to Mister de Falais who was considering leaving the Netherlands.</p>"
+    },
+    "background":{
+        "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f001r.jpg",
+        "color": "#5e5e52"
+    } 
+},
+{ 
+    "media": {
+        "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f003r.jpg",
+        "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f003r.jpg"
+    },
+    "start_date": {
+        "day": "14",
+        "month": "10",
+        "year": "1543"
+    },
+    "display_date": "October 14th, [1543]",
+    "text": {
+        "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/mrs-de-falais-oct-1543/' style='color:#ffffe'>To Mistress de Falais</a>",
+        "text": "<p>Calvin's encouragement to Mistress de Falais who shared her husbands sentiments.</p>"
+    },
+    "background":{
+        "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f003r.jpg",
+        "color": "#5e5e52"
+    } 
+},
+{ 
+    "media": {
+        "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f005r.jpg",
+        "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f005r.jpg"
+    },
+    "start_date": {
+        "year": "1543"
+    },
+    "display_date": "late 1543",
+    "text": {
+        "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/26/falais-late1543/' style='color:#ffffe'>To Mister de Falais</a>",
+        "text": "<p>Encouragement to Mister de Falais to vanquish his last hesitations concerning his voluntary exile.</p>"
+    },
+    "background":{
+        "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f005r.jpg",
+        "color": "#5e5e52"
+    } 
+},
+{ 
+    "media": {
+        "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f009r.jpg",
+        "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f009r.jpg"
+    },
+    "start_date": {
+        "day": "24",
+        "month": "6",
+        "year": "1544"
+    },
+    "display_date": "June 24th, 1544",
+    "text": {
+        "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/26/mrs-de-falais-24-06-1544/' style='color:#ffffe'>To Mistress de Falais</a>",
+        "text": "<p>Encouragement to Mistress de Falais in her new life of freedom of conscience and religion, after having followed her husband to Cologne and Strasbourg.</p>"
+    },
+    "background":{
+        "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f009r.jpg",
+        "color": "#5e5e52"
+    } 
+},
+{ 
+    "media": {
+        "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107%252Fms_lat_107_f006r.jpg",
+        "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107%252Fms_lat_107_f006r.jpg"
+    },
+    "start_date": {
+        "day": "20",
+        "month": "",
+        "year": "1546"
+    },
+    "display_date": "** 20th, [1546]",
+    "text": {
+        "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/de-bude-1546/' style='color:#ffffe'>To Mistress de Budé</a>",
+        "text": "<p>Calvin advises her to retire to Geneva.</p>"
+    },
+    "background":{
+        "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107%252Fms_lat_107_f006r.jpg",
+        "color": "#5e5e52"
+    } 
+},
+{ 
+    "media": {
+        "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107a_volume_2%252Fms_lat_107a_02_f357r.jpg",
+        "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107a_volume_2%252Fms_lat_107a_02_f357r.jpg"
+    },
+    "start_date": {
+        "day": "13",
+        "month": "6",
+        "year": "1548"
+    },
+    "display_date": "June 13th, 1548",
+    "text": {
+        "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/26/new-believer-1548/' style='color:#ffffe'>To a new believer</a>",
+        "text": "<p>Reply to a question about the Mass and encouragement in the faith.</p>"
+    },
+    "background":{
+        "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107a_volume_2%252Fms_lat_107a_02_f357r.jpg",
+        "color": "#5e5e52"
+    } 
+},
+{ 
+    "media": {
+        "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_145%252Fms_fr_00145_f046r.jpg",
+        "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_145%252Fms_fr_00145_f046r.jpg"
+    },
+    "start_date": {
+        "day": "6",
+        "month": "10",
+        "year": "1552"
+    },
+    "display_date": "October 6th, 1552",
+    "text": {
+        "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/26/lords-geneva-oct-1552/' style='color:#ffffe'>To the Seigneury of Geneva</a>",
+        "text": "<p>Calvin's response to Jean Trolliet's accusations related to his doctrine.</p>"
+    },
+    "background":{
+        "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_145%252Fms_fr_00145_f046r.jpg",
+        "color": "#5e5e52"
+    } 
+},
+{ 
+    "media": {
+        "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107a_volume_2%252Fms_lat_107a_02_f342r.jpg",
+        "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107a_volume_2%252Fms_lat_107a_02_f342r.jpg"
+    },
+    "start_date": {
+        "year": "1552"
+    },
+    "display_date": "1552",
+    "text": {
+        "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/27/falais-1552/' style='color:#ffffe'>To Mister de Falais.</a>",
+        "text": "<p>Last letter from Calvin to Mr. de Falais. Calvin ends his friendship with him after he had openly taken Bolsec's side.</p>"
+    },
+    "background":{
+        "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107a_volume_2%252Fms_lat_107a_02_f342r.jpg",
+        "color": "#5e5e52"
+    } 
+},
+{ 
+    "media": {
+        "url": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107%252Fms_lat_107_f035r.jpg",
+        "thumbnail": "https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107%252Fms_lat_107_f035r.jpg"
+    },
+    "start_date": {
+        "day": "12",
+        "month": "3",
+        "year": "1553"
+    },
+    "display_date": "March 12th, 1553",
+    "text": {
+        "headline": "<a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/27/king-england-1553/' style='color:#ffffe'>To the King of England</a>",
+        "text": "<p>Calvin's intercession before the King of England on behalf of a gentleman persecuted on the grounds of religion.</p>"
+    },
+    "background":{
+        "url":"https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107%252Fms_lat_107_f035r.jpg",
+        "color": "#5e5e52"
+    } 
+}
+  ]
+}

@@ -1,0 +1,60 @@
+{          
+    "storymap": {
+        "language": "en",          
+        "map_type": "stamen:toner",          
+        "map_as_image": false,       
+        "map_subdomains": "",        
+          
+        "slides": [
+            {
+                "type": "overview",      
+                "location": {
+                    "name":"Europe",    
+                    "lat": 54.5260,         
+                    "lon": 15.255    
+                },
+                "text": {                
+                    "headline": "n.p.",
+                "text": "<ul><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/bishop-may-1542/' style='color:#ffffe'>To Mister the bishop of ** [May 1542]</a><p>Defense of the doctrine of the Reformed church against the accusations of being the cause of the plague at Geneva.<br/>Instruction to seek only God for deliverance.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/de-falais-oct-1543/' style='color:#ffffe'>To Mister de Falais [October 14th, 1543]</a><p>Calvin gives his advice to Mister de Falais who was considering leaving the Netherlands.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/mrs-de-falais-oct-1543/' style='color:#ffffe'>To Mistress de Falais (October 14th, [1543])</a><p>Calvin's encouragement to Mistress de Falais who shared her husbands sentiments.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/26/falais-late1543/' style='color:#ffffe'>To Mister de Falais (late 1543)</a><p>Encouragement to Mister de Falais to vanquish his last hesitations concerning his voluntary exile.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/26/mrs-de-falais-24-06-1544/' style='color:#ffffe'>To Mistress de Falais (June 24th, 1544)</a><p>Encouragement to Mistress de Falais in her new life of freedom of conscience and religion, after having followed her husband to Cologne and Strasbourg.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/de-bude-1546/' style='color:#ffffe'>To Mistress de Budé (** 20th, [1546])</a><p>Calvin advises her to retire to Geneva.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/26/lords-geneva-oct-1552/' style='color:#ffffe'>To the Seigneury of Geneva (October 6th, 1552)</a><p>Calvin's response to Jean Trolliet's accusations related to his doctrine.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/27/falais-1552/' style='color:#ffffe'>To Mister de Falais (1552)</a><p>Last letter from Calvin to Mr. de Falais. Calvin ends his friendship with him after he had openly taken Bolsec's side.</p></li></ul>"
+                }
+            },
+            {
+                      
+                "location": {
+                    "name":"Geneva",    
+                    "lat": 46.2043907,         
+                    "lon": 6.1431577    
+                },
+                "text": {                
+                    "headline": "From Geneva",
+                "text": "<ul><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/tillet-en/' style='color:#ffffe'>To Louis du Tillet (January 31st, 1538)</a><p>Jean Calvin's reply to Louis de Tillet after receiving his letter informing him of his decision to return to the catholic faith.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/lords-neuchatel-1541/' style='color:#ffffe'>To the Seigneury of Neuchâtel (September 29th, 1541)</a><p>Letter on behalf of the ministers of Geneva, including Calvin, addressed to those of Nauchâtel to persuade them of not deposing William Farel after he publicly censured a lady of importance. This letter was carried by Pierre Viret and containes instructions from Calvin for his intervention before the seigneury of Neuchâtel.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/duchess-ferrara-1541/' style='color:#ffffe'>To the duchess of Ferrara (October 1541)</a><p>Calvin insructs on the mistakes of the Mass.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/26/new-believer-1548/' style='color:#ffffe'>To a new believer (June 13th, 1548)</a><p>Reply to a question about the Mass and encouragement in the faith.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/27/king-england-1553/' style='color:#ffffe'>To the King of England (March 12th, 1553)</a><p>Calvin's intercession before the King of England on behalf of a gentleman persecuted on the grounds of religion.</p></li></ul>"
+                },
+                "media": {               
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Escalade-battle-2.jpg",
+                    "caption": "<p title='Etching enhanced with watercolor, 194 x 291 mm, with square lines, 256 x 327 mm, on the leaf, (BPU, inv. la 2200 Rés, pl. 99).'>Geneva Urbs, around 1603, Matthias Quad (1557 - after 1608)</p>",
+                    "credit": "<p>Photocopied from page 183 of the work « Journal du temps de l'Escalade » by Slatkine, 2002 Geneva.</p>"
+                }
+            },
+            {
+                      
+                "location": {  
+                    "name":"Strabourg",   
+                    "lat": 48.5734053,         
+                    "lon": 7.7521113    
+                },
+                "text": {                
+                    "headline": "From Strasbourg",
+                    "text": "<ul><li><a href='https://lettres-calvin.rarebook-ubfc.fr/en/2022/08/25/lords-geneva-1541/' style='color:#ffffe'>To the Seigneury of Geneva (February 19th, 1541)</a><p>In the context of the Diet of Regensburg, which was an important theological debate between catholics and protestants, John Calvin, after being called by William Farel to return to Geneva, explains the reasons of his belated arrival and reiterates his engagement with the church.</p></li></ul>"  
+                },
+                "media": {               
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Absolute_Strasbourg_1644_Merian_01.jpg",       
+                    "caption": "<p>Map of Strasbourg of 1644 according to Merian</p>",
+                    "credit": "<p>Author: Jonathan M</p>"
+                }
+            }
+
+            
+        ]           
+    }
+}
+

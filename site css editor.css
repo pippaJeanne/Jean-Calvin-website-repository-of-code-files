@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
+body .site-content{
+	font-family: 'Open Sans', italic !important;
+	font-size:18px;
+}
+h1, h2, h3, h4, h5, h6, a {
+	font-family: 'Open Sans', italic !important;
+}
+
+.ast-separate-container .ast-article-single {
+	padding:5.34em 4.00em;
+}
+
+h5, h6{
+	margin-bottom:20px;
+}
+
+.glyphicon-fullscreen:before{
+	content: url("https://lettres-calvin.rarebook-ubfc.fr/SVG/arrows-fullscreen.svg");
+color:black;
+}
+
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
+padding: 4px;
+	border: 0;
+}
+
+a{
+	text-decoration:underline;
+	color:#797c80!important;
+	text-decoration-color: #797c80!important;
+}
+a:hover, .primary-navigation a:hover{
+	text-decoration:none !important;
+	color: #21759b;
+	text-decoration-color:#21759b !important;
+}
+.entry-content{
+	margin:auto !important;
+}
+
+
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce), *[class*=inner-container] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce), .default-max-width {
+    max-width: var(--responsive--aligndefault-width);
+    margin-left:auto;
+	margin-right: auto;
+}
+
+p {
+	text-align:justify !important;
+}
+header.entry-header.alignwide{
+	display:none;
+}
+p.site-description{
+	display:none;
+}
+.content-wrap::after{
+	content: "";
+	display:table;
+	clear: both;
+}
+
+hr.fin{
+	border-bottom: 1px solid #1b3440;
+}
+* {
+box-sizing: border-box;
+}
+.content-wrap::after {
+content: "";
+clear: both;
+	display: table;}
+@media only screen and (max-width: 360px){
+	.preface, .calvin, .calvino{
+		min-width:100%;
+	}
+}
+@media only screen and (min-width: 762px){
+	.preface, .calvin, .calvino{
+		max-width:35%;
+		padding: 5px;
+	}
+}		
+
+/*four view for letters */
+#no-margin{
+	/*font-size:2.5rem;*/
+	margin-bottom:0 !important;
+}
+#no-margin:hover{
+	color:white !important;
+}
+h6{
+	text-align:justify !important;
+}
+.sec-container {
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+                    }
+        
+.section {
+background-color: #eee;
+background: rgb(243,231,214);
+background: linear-gradient(340deg, rgba(243,231,214,1) 70%, rgba(255,255,255,1) 100%);
+          color: #444;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          text-align: center;
+          border: none;
+          outline: none;
+          transition: 0.4s;
+        }
+        
+ /*(add the .active class with JS), and on mouse over (hover) */
+
+.active, .section:hover {
+background-color: #ccc;
+background: rgb(243,231,214);
+}
+.section:focus{
+	background-color:rgb(243,231,214) !important;
+}
+        
+        /* Note: hidden by default, except for modernisation and translation (maybe) */
+ 
+.inner-cont {
+width:50%;
+display:block;
+margin-bottom:1rem;
+ }
+       
+@media only screen and (max-width:732px){
+            
+.inner-cont{
+width:100%;
+ }
+	article{
+		padding-left:0.5rem !important;
+		padding-right:0.5rem !important;
+	}
+}
+
+.flex-container-vis {
+                                width: 100%;
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: space-around;
+                                align-items: center;
+                                justify-content: center;
+                                align-items: flex-start;
+}
+                            .ancho-col {
+                                min-width: 300px;
+                                width: 100%;            
+}
+
+#siteTitle{
+	color: whitesmoke !important;
+	text-shadow:4px 4px 6px grey !important;
+}
+
+.content {
+ height:600px;
+ padding: 1rem 18px;
+background-color: white;
+display: none;
+overflow: auto;
+border-left:1px solid #ccc;
+        }
+ .btn-row , #voir{
+	 width:auto;
+	 margin:.5rem;
+            padding:0,3rem;
+            background: #eee;
+            border:none;
+            box-shadow: 1px 1px 2px;
+border-radius: 5px 25px;
+            color: #444;
+            position:relative;
+            cursor:pointer;
+        }
+#voir:hover,#voir:focus,.btn-row:focus,.btn-row:hover{
+	color: #ffffff;
+background-color: var(--ast-global-color-1);
+border-color: var(--ast-global-color-1);
+	opacity:0.2;
+}
+.arrow{
+    border:solid #555;
+    border-width:0 3px 3px 0;
+display: inline-block;
+padding: 3px;
+position:relative;
+top:-1.5rem;
+left:45%;
+}
+.down {
+  transform: rotate(45deg);  
+  -webkit-transform: rotate(45deg);
+}
+.up {
+   transform: rotate(225deg);
+   -webkit-transform: rotate(225deg);
+}
+
+.full {
+	padding:3.5rem;
+display:block;
+position:relative;
+height: 100%;
+width:100%;
+}
+.tagcloud a:hover, .tagcloud a:focus, .tagcloud a.current-item {
+    color: inherit !important;
+    border-color: transparent !important;
+    background-color: transparent !important;
+}
+h6.toRight{
+	text-align:right !important;
+}
+.elementor-widget-wrap {
+    position: relative;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+}
+div.card-container{
+	display:flex;
+	flex-wrap:wrap;
+}
+div.name-card {
+	width:30%;
+	height:auto;
+	margin:1rem;
+	padding:1rem;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 3px 40px rgba(36,36,36,.1);
+	transform:scale(1);
+	transition:transform 2s;
+	
+}
+@media only screen and (max-width:732px){
+	div.name-card{
+		width:100%;
+}
+}
+div.name-card:hover {
+	transform:scale(1.1);
+}
+

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>Lettre à </title>
+<editor role="Modernisation et encodage">Yanet Hernández Pedraza (M2 Rare Books and Digital Humanities - UBFC)</editor>
+<editor role="Édition et relecture">Rudy Chaulet (ISTA - Université de Franche-Comté)</editor>
+</titleStmt>
+<publicationStmt>
+  <publisher>TEI Consortium</publisher>
+   <availability status="free">
+     <licence target="http://creativecommons.org/licenses/by-sa/3.0/">          Distributed under a Creative Commons Attribution-ShareAlike
+          3.0 Unported License</licence>
+          <licence target="http://www.opensource.org/licenses/BSD-2-Clause">
+          <p>Copyright 2013 TEI Consortium.</p>
+          <p>All rights reserved.</p>
+          <p>Redistribution and use in source and binary forms, with
+            or without modification, are permitted provided that the
+            following conditions are met:</p>
+            <list><item>Redistributions of source code must retain the
+              above copyright notice, this list of conditions and the
+              following disclaimer.</item>
+              <item>Redistributions in binary form must reproduce the
+              above copyright notice, this list of conditions and the
+              following disclaimer in the documentation and/or other
+              materials provided with the distribution.</item>
+              </list>
+              <p>This software is provided by the copyright holders and
+            contributors "as is" and any express or implied
+            warranties, including, but not limited to, the implied
+            warranties of merchantability and fitness for a particular
+            purpose are disclaimed. In no event shall the copyright
+            holder or contributors be liable for any direct, indirect,
+            incidental, special, exemplary, or consequential damages
+            (including, but not limited to, procurement of substitute
+            goods or services; loss of use, data, or profits; or
+            business interruption) however caused and on any theory of
+            liability, whether in contract, strict liability, or tort
+            (including negligence or otherwise) arising in any way out
+            of the use of this software, even if advised of the
+            possibility of such damage.</p>
+            </licence>
+            <p>TEI material can be licensed differently depending on the
+          use you intend to make of it. Hence it is made available
+          under both the CC+BY and BSD-2 licences. The CC+BY licence
+          is generally appropriate for usages which treat TEI content
+          as data or documentation. The BSD-2 licence is generally
+          appropriate for usage of TEI content in a software
+          environment. For further information or clarification,
+          please contact the <ref target="mailto:info@tei-c.org">TEI
+          Consortium</ref>.</p>
+   </availability>
+</publicationStmt>
+<sourceDesc>
+ <bibl>
+  <title>Lettres de Jean Calvin : lettres françaises. T. 1 / recueillies pour la première fois et publ. d'après les ms. originaux par Jules Bonnet</title>. Par
+  <author><name>
+    <forename>Jean</forename>
+    <surname>Calvin</surname>
+   </name><date when="(1509-1564)">(1509-1564)</date>. Auteur du texte
+   </author>, éd.
+  <editor>
+   <name>
+    <forename>Jules</forename>
+    <surname>Bonnet</surname>
+   </name>
+  </editor>,
+ <pubPlace>Paris</pubPlace>,
+ <publisher>Librarie de Ch. Meyrueis et compagnie</publisher>,
+ <date when="1854">1854</date>.
+ <p>Provenance : Bibliothèque nationale de France</p>
+ </bibl>
+ <notesStmt>
+          <note>Toutes les notes viennent de l'édition de Jules Bonnet de 1854 
+          sauf celles des phrases latines qui ont été traduites par l'auteur de ce projet : Yanet Hernández Pedraza</note>
+ </notesStmt>
+</sourceDesc>
+</fileDesc>
+<profileDesc>
+ <correspDesc>
+  <correspAction type="sent">
+  <persName>Jean Calvin
+  <addName type="pseudonym"></addName> <!--si signée sous pseudonyme, enlever sinon-->
+  </persName>
+  <settlement>Strasbourg</settlement>
+  <date when="1541-02-19"> 19 février 1541</date>
+ </correspAction>
+ <correspAction type="received">
+  <name type="collectivity">Aux Seigneurs de Genève</name>
+  <settlement>Genève</settlement>
+ </correspAction>
+ <correspContext>
+  <ref type="prev"
+   target=""><persName></persName>
+  <date from="" to=""></date>
+  </ref>
+  <ref type="next"
+   target=""><persName></persName>
+  <date when=""></date>
+  </ref>
+ </correspContext>
+ </correspDesc>
+</profileDesc>
+</teiHeader>
+<text>
+<body>
+<opener>
+<address><addrLine>Aux <name type="group">Seigneurs de Neuchâtel</name><note n="*" place="bottom"><p> </p></note></addrLine>
+</address>
+<dateline xml:id="opener"><placeName>Neuchâtel</placeName><date when="1541-09-29"> 29 septembre 1541</date>
+</dateline>
+<hi rend="bold">Original. autographe. Bibl. de Genève. Vol. 145.<br/> 
+[Maintenant sous la cote Ms. fr. 145 (f. 30-34)]</hi>
+<salute>Nobles, honorables et <choice><orig>puissans</orig><reg>puissants</reg></choice> seigneurs,</salute>
+</opener>
+<p></p>
+<p></p>
+<note n="1" place="bottom"><p> </p></note>
+<note n="2" place="bottom"><p> </p></note>
+<note n="3" place="bottom"><p> </p></note>
+<note n="4" place="bottom"><p> </p></note>
+<note n="5" place="bottom"><p> </p></note>
+<note n="6" place="bottom"><p> </p></note>
+<note n="7" place="bottom"><p> </p></note>
+<note n="8" place="bottom"><p> </p></note>
+<persName type="surname" ref="Jean Trolliet(voir note)"><choice><orig>Troullet</orig><reg>Trolliet</reg></choice></persName>
+<hi rend="italic">latin</hi>
+ <closer>
+      <dateline>De <placeName>endroi</placeName>, <date when="aaaa-mm-jj">ce dix-<choice><orig>neufviesme</orig><reg>neufvième</reg></choice> de <choice><orig>febvrier</orig><reg>février</reg></choice> mil cinq <choice><orig>cens</orig><reg>cent</reg></choice> <choice><orig>quarante et ung</orig><reg>quarante-et-un</reg></choice></date>.
+      </dateline> 
+
+      <salute><choice><orig>Vostre</orig><reg>Votre</reg></choice> humble serviteur et entier <choice><orig>amy</orig><reg>ami</reg></choice>,</salute>
+     
+      <signed><choice><orig>JÉHAN</orig><reg>JEAN</reg></choice> CALVIN</signed>
+      </closer>
+  </body>
+ </text>
+</TEI>
