@@ -1,0 +1,1332 @@
+
+  <!--Spinning gallery : 3D carousel code taken and adapted from https://codepen.io/hoanghien0410/pen/MMPaqm - // Author: Hoang Tran (https://www.facebook.com/profile.php?id=100004848287494)
+// Github verson (1 file .html): https://github.com/HoangTran0410/3DCarousel/blob/master/index.html -->
+
+  <head>
+    <script type="text/javascript" charset="UTF-8"
+        src="//cdn.cookie-script.com/s/a14115f0e7fc780943f1afeaf5fad580.js"></script>
+</head>
+<!--Image of Jean Calvin on the menu and on the left side is a Portrait of Calvin (1858)
+painting by Ary Scheffer (Museum: Musée de la Vie romantique)
+License:
+Courtesy of Wikimedia Commons
+For more:
+https://www.wikidata.org/wiki/Q97578531  -->
+<div>
+    <link href="https://unpkg.com/material-components-web@13.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        .bgim {
+            position: relative !important;
+            margin-top: 3% !important;
+            left: calc(5%/2) !important;
+            width: 95% !important;
+            height: auto !important;
+            opacity: 1 !important;
+            box-shadow: 0px 0px 10px rgb(0 0 0 / 0.7) !important;
+            border-radius: 3px 3px 10px 10px !important;
+        }
+
+        .bbody {
+            display: flex !important;
+            min-width: 260px !important;
+            /*height: auto;*/
+        }
+
+        .mdc-drawer-app-content {
+            flex: auto;
+            overflow: auto;
+            position: relative;
+        }
+
+        /* MDC drawer list item text */
+        .mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic .mdc-list-item__ripple,
+
+        /* MDC drawer list item leading icon */
+        .mdc-drawer .mdc-list-item--activated {
+            color: #000000;
+            background-color: #ECD07C;
+        }
+
+        .mdc-drawer {
+            flex: auto;
+            overflow: auto;
+            position: fixed;
+            /*top: 45px;*/
+            left: 3px !important;
+            /*width: 256px !important;
+            /*z-index: 10000;*/
+            /* --mdc-theme-primary: #FEDBD0 !important;*/
+            /*  --mdc-theme-on-primary: #442C2E !important;*/
+            /*  --mdc-theme-secondary: #FEEAE6 !important;*/
+            /*  --mdc-theme-on-secondary: #442C2E !important;*/
+            /*  --mdc-theme-surface: #FFFBFA !important;*/
+            /*  --mdc-theme-on-surface: #442C2E !important;*/
+            /*  --mdc-theme-background: #FFFFFF !important;*/
+            /*  --mdc-theme-on-background: #442C2E !important;*/
+        }
+
+        .main-content {
+            overflow: auto !important;
+            height: 100% !important;
+        }
+
+        .list-principal {
+            margin: 5px 5px auto 5px !important;
+        }
+
+        .mdc-list-item {
+            border-radius: 6px !important;
+            justify-content: left !important;
+            padding: 5px 0px 5px 5px !important;
+
+        }
+
+        .mdc-list-item__tex {
+            padding: 5px 0px 5px 5px !important;
+        }
+
+        .submenu1grupo {
+            margin: 0px 0px 0px 5px !important;
+            padding: 0px !important;
+        }
+
+        .listagrupo1 {
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+
+        .submenu2grupo {
+            margin: 0px 0px 0px 5px !important;
+            padding: 0px !important;
+        }
+
+        .listagrupo2 {
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+
+        .letraIdioma {
+            color: rgb(255, 255, 255, 0.8) !important;
+            color: #FFFFFF;
+            color: #E9E6E1;
+            color: #676767 !important;
+
+            font-size: 1em !important;
+            /*margin:5px 0px 5px 0px;*/
+
+            z-index: 60 !important;
+        }
+
+        .letraIdioma:hover,
+        .letraIdioma:active {
+            font-size: 133% !important;
+        }
+
+        .tit2 {
+            font-size: 0.625em !important;
+        }
+
+        .ajuste3 {
+            background-color: none !important;
+            padding: 8px 20px !important;
+        }
+
+        @media screen and (max-width: 259px) {
+            .texto-idioma {
+                display: none !important;
+            }
+
+            .ajuste1 {
+                padding-right: 3px !important;
+                padding-left: 3px !important;
+            }
+
+            .ajuste2 {
+                padding-right: 3px !important;
+                padding-left: 3px !important;
+            }
+
+            .ajuste3 {
+                padding-left: 0px !important;
+                padding-right: 20px !important;
+            }
+        }
+
+        @media screen and (min-width: 350px) {
+            .icono-idioma {
+                display: none !important;
+            }
+        }
+
+        @media screen and (min-width: 260px) and (max-width: 349px) {
+            .texto-idioma {
+                display: none !important;
+            }
+        }
+
+        /*:root {
+
+        }*/
+
+        /*// Only apply this style if below top app bar. */
+        /*.mdc-top-app-bar {*/
+        /*z-index: 7;*/
+        /*}*/
+
+        a {
+            text-decoration: none !important;
+        }
+
+
+        .S1 {
+            height: 100% !important;
+            max-height: 450px !important;
+            height: 450px !important;
+            /* for touch screen */
+            touch-action: none !important;
+
+            background-image: url("https://lettres-calvin.rarebook-ubfc.fr/wp-content/uploads/2022/04/Calvin1.jpg") !important;
+            background-color: linear-gradient(180deg, rgba(243, 231, 214, 1) 50%, rgba(255, 255, 255, 1) 100%), linear-gradient(180deg, rgba(243, 231, 214, 1) 50%, rgba(255, 255, 255, 1) 100%) !important;
+            background-size: contain;
+
+            overflow: hidden !important;
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+            background: #111 !important;
+            -webkit-perspective: 1000px !important;
+            perspective: 1000px !important;
+            -webkit-transform-style: preserve-3d !important;
+            transform-style: preserve-3d !important;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        #drag-container1,
+        #spin-container1 {
+            position: relative !important;
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+            margin: auto !important;
+            -webkit-transform-style: preserve-3d !important;
+            transform-style: preserve-3d !important;
+            -webkit-transform: rotateX(-10deg);
+            transform: rotateX(-10deg);
+        }
+
+        #drag-container1 .mdc-card,
+        #drag-container1 .manuscrito {
+            -webkit-transform-style: preserve-3d !important;
+            transform-style: preserve-3d !important;
+            position: absolute !important;
+            left: 0 !important;
+            top: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            line-height: 200px !important;
+            font-size: 50px !important;
+            text-align: center;
+            -webkit-box-shadow: 0 0 8px #fff !important;
+            box-shadow: 0 0 8px #fff !important;
+            -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005) !important;
+        }
+
+        #drag-container1 .mdc-card:hover,
+        #drag-container1 .manuscrito:hover {
+            -webkit-box-shadow: 0 0 15px #fffd !important;
+            box-shadow: 0 0 15px #fffd !important;
+            -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007) !important;
+        }
+
+        #spin-container1 {
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+        }
+
+        .lettre-img {
+            vertical-align: middle !important;
+            height: auto !important;
+            width: 100% !important;
+        }
+
+        .height {
+            height: 50px !important;
+            object-fit: cover !important;
+            -o-object-fit: cover !important;
+            border-radius: 5% !important;
+        }
+
+        .media {
+            position: relative !important;
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+
+        .fotocalvin {
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            border-radius: 50% !important;
+            -webkit-box-shadow: 0 0 8px #fff !important;
+            box-shadow: 0 0 8px #fff !important;
+            -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005) !important;
+        }
+
+        .fotocalvin:hover {
+            -webkit-box-shadow: 0 0 15px #fffd !important;
+            box-shadow: 0 0 15px #fffd !important;
+            -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007) !important;
+        }
+
+        .lettre-card {
+            padding: 8px 8px 8px 8px !important;
+        }
+
+        .lettre1-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fcorrespondance_ecclesiastiqueead%252Fms_fr_401%252Fms_fr_00401_f017_02.jpg");
+            /*transform: rotate(90deg) !important;*/
+            /*background-position: bottom left !important;*/
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+
+        .lettre2-card__media {
+            background-image: url("https://gallica.bnf.fr/ark:/12148/btv1b90076313/f3.jpeg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+
+        .lettre3-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_145%252Fms_fr_00145_f157r.jpg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+        .lettre4-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_196%252Fms_fr_00196_f079r.jpg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+        .lettre5-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107a_volume_2%252Fms_lat_107a_02_f369r.jpg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+        .lettre6-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f001r.jpg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+        .lettre7-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f003r.jpg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+        .lettre8-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f005r.jpg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+        .lettre9-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_194%252Fms_fr_0194_f009r.jpg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+        .lettre10-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107%252Fms_lat_107_f006r.jpg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+        .lettre11-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107a_volume_2%252Fms_lat_107a_02_f357r.jpg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+        .lettre12-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_fr_00001_00198ead%252Fms_fr_145%252Fms_fr_00145_f046r.jpg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+        .lettre13-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107a_volume_2%252Fms_lat_107a_02_f342r.jpg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+        .lettre14-card__media {
+            background-image: url("https://archives.bge-geneve.ch/archive/fullSizeImage?file=https%3A%2F%2Farchives.bge-geneve.ch%2Fcgi-bin%2Fiipsrv.fcgi%3FPY%3D1%26CVT%3DJPG%26FIF%3D%252Fhome%252Fhttpd%252Fbge%252Fdiffusion%252Fprod%252Fapp%252Fwebroot%252Fdata%252Ffiles%252Fbge.diffusion%252Fimages%252Fms_lat_1_376ead%252Fms_lat_107%252Fms_lat_107_f035r.jpg");
+            box-shadow: 5px 5px 2.5px rgba(113, 113, 113, 0.6) !important;
+            border-radius: 5% !important;
+        }
+        
+
+        .lettre-card__title {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+            line-height: 1.25rem !important;
+            text-align: center !important;
+        }
+
+        .lettre-card__subtitle {
+            padding-top: 1rem !important;
+            padding-left: 0.3rem !important;
+            padding-right: 0.3rem !important;
+            text-align: left !important;
+        }
+
+        .lettre-card__secondary--body {
+            /*padding: 0 0.25rem 4px !important;*/
+            padding-top: 0.25rem !important;
+            padding-left: 0.3rem !important;
+            padding-right: 0.3rem !important;
+            line-height: 1rem !important;
+            text-align: left !important;
+        }
+
+        .texto {
+            text-align: center !important;
+            width: 400px !important;
+        }
+
+        #drag-container1 .texto {
+            font-family: Serif !important;
+            position: absolute !important;
+            top: 100% !important;
+            left: 50% !important;
+            -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+            transform: translate(-50%, -50%) rotateX(90deg);
+            color: #fff !important;
+        }
+
+        #groundy1 {
+            width: 900px !important;
+            height: 900px !important;
+            position: absolute !important;
+            top: 100% !important;
+            left: 50% !important;
+            -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+            transform: translate(-50%, -50%) rotateX(90deg);
+            background: -webkit-radial-gradient(center center, farthest-side, #9993, transparent) !important;
+        }
+
+
+        @-webkit-keyframes spin {
+            from {
+                -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+
+            to {
+                -webkit-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+
+            to {
+                -webkit-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+            }
+        }
+
+        @-webkit-keyframes spinRevert {
+            from {
+                -webkit-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+            }
+
+            to {
+                -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+        }
+
+        @keyframes spinRevert {
+            from {
+                -webkit-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+            }
+
+            to {
+                -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+        }
+
+        .girar {
+            animation: spin 60s 1 linear;
+        }
+
+        .girarInverso {
+            animation: spinRevert 60s 1 linear;
+        }
+    </style>
+    <div class="bbody">
+        <header class="mdc-top-app-bar mdc-top-app-bar-estilo" id="app-bar"
+            style="background-image: linear-gradient(rgb(243, 231, 214) 75%, rgb(255, 255, 255) 100%); min-width: 300px !important; top: 0px;">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start ajuste1">
+                    <span
+                        class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button button1 mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                        aria-label="Menu" title="Menu"
+                        style="color: rgb(103, 103, 103) !important; --mdc-ripple-fg-size: 28px; --mdc-ripple-fg-scale: 1.7142857142857142; --mdc-ripple-left: 10px; --mdc-ripple-top: 10px;">menu
+                        <div class="mdc-icon-button__ripple"></div>
+                    </span>
+                    <span class="mdc-top-app-bar__title ajuste2" style="display: flex;">
+                        <a id="siteTitle" href="https://lettres-calvin.rarebook-ubfc.fr/fr/fr-accueil-2/">
+                            <h3 style="color: #676767 !important;">
+                                Jean Calvin
+                            </h3>
+                            <h3 class="tit2" style="color: #676767 !important;">
+                                Correspondance française
+                            </h3>
+                        </a>
+                    </span>
+                </section>
+
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                  <div class="elementor-element elementor-element-3cd85bc elementor-widget__width-auto elementor-widget elementor-widget-elementskit-header-search letraIdioma" data-id="3cd85bc" data-element_type="widget" data-widget_type="elementskit-header-search.default" style="z-index:100">
+                    <div class="elementor-widget-container">
+                  <div class="ekit-wid-con">        <a href="#ekit_modal-popup-3cd85bc" class="ekit_navsearch-button ekit-modal-popup">
+                        <i aria-hidden="true" class="icon icon-search"></i>        </a>
+                    <!-- language switcher strart -->
+                    <!-- xs modal -->
+                    <div class="zoom-anim-dialog ekit_modal-searchPanel mfp-hide" id="ekit_modal-popup-3cd85bc">
+                        <div class="ekit-search-panel">
+                        <!-- Polylang search - thanks to Alain Melsens -->
+                            <form role="search" method="get" class="ekit-search-group" action="https://lettres-calvin.rarebook-ubfc.fr/fr">
+                                <input type="search" class="ekit_search-field" placeholder="Search..." value="" name="s">
+                                <button type="submit" class="ekit_search-button">
+                                    <i aria-hidden="true" class="icon icon-search"></i>                    </button>
+                            </form>
+                        </div>
+                    </div><!-- End xs modal -->
+                    <!-- end language switcher strart -->
+                    </div>		</div>
+                    </div>
+
+                   
+                    <div class="mdc-top-app-bar__action-item ajuste3 texto-idioma mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                        style="--mdc-ripple-fg-size: 92px; --mdc-ripple-fg-scale: 1.6851222826086956; --mdc-ripple-left: 32px; --mdc-ripple-top: -24px;">
+                        <a class="letraIdioma" href="https://lettres-calvin.rarebook-ubfc.fr/en-home/">English</a>
+                        <span class="letraIdioma">|</span>
+                        <a class="letraIdioma" href="#">Español</a>
+                    </div>
+                </section>
+            </div>
+        </header>
+        <aside class="mdc-drawer mdc-drawer--modal mdc-drawer--dismissible mdc-elevation--z4"
+            style="background-color: #E5D2C3;" data-mdc-auto-init="MDCDrawer" data-mdc-auto-init-state="initialized">
+            <div class="mdc-drawer__header">
+                <div
+                    style="display:flex; justify-content: flex-end; flex-flow: row;flex-wrap: nowrap; align-items: center; margin-top: 10px;">
+                    <span style="margin-left: auto;margin-right: auto;">
+                        <img src="https://lettres-calvin.rarebook-ubfc.fr/wp-content/uploads/2022/02/Jean-Calvin.jpg"
+                            alt="Calvin" width="85" height="auto"
+                            style=" display: block;margin-left: auto;margin-right: auto; border-radius: 50%;">
+                        <!-- <h5>Cerrar</h5> -->
+                    </span>
+                    <span class="material-icons mdc-icon-button bcerrar"
+                        style="position: absolute; right: 0px; top: 0px" title="Cerrar el Menú de Navegación"
+                        aria-label="Cerrar el Menú de Navegación">close
+                        <div class="mdc-icon-button__ripple"></div>
+                    </span>
+                </div>
+                <div style="text-align: center!important;">
+                    <h1 class="mdc-drawer__title">Jean Calvin</h1>
+                    <h2 class="mdc-drawer__subtitle" style="margin-bottom: 5px;text-align: center!important;">
+                        Correspondance française</h2>
+                </div>
+            </div>
+            <div role="separator" class="mdc-list-divider" style="margin-bottom: 2px;"> </div>
+            <div class="mdc-drawer__content" style="z-index: 10000; display: block;">
+                <div class="mdc-list list-principal" role="menu">
+                    <a class="mdc-list-item mdc-list-item--activated mdc-ripple-upgraded"
+                        href="https://lettres-calvin.rarebook-ubfc.fr/fr/fr-accueil-2/" aria-current="page"
+                        tabindex="-1">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__primary-text"> Accueil</span>
+                    </a>
+                    <a class="mdc-list-item mdc-ripple-upgraded" style="align-items: center;" href="#" tabindex="-1">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__primary-text"> Jean Calvin</span>
+                        <span
+                            style="position: absolute; right: 0px; --mdc-ripple-fg-size: 0px; --mdc-ripple-fg-scale: NaN; --mdc-ripple-left: 0px; --mdc-ripple-top: 0px;"
+                            class="submenu1 mdc-icon-button mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                            aria-label="Opciones" data-aria-label-on="Ocultar Opciones"
+                            data-aria-label-off="Mostrar Opciones">
+                            <div class="mdc-icon-button__ripple"></div>
+                            <i
+                                class="material-icons mdc-list-item__graphic mdc-icon-button__icon mdc-icon-button__icon--on">arrow_drop_up</i>
+                            <i class="material-icons mdc-list-item__graphic mdc-icon-button__icon">arrow_drop_down</i>
+                        </span>
+                    </a>
+                    <div class="submenu1grupo mdc-list mdc-list-group" style="display:none!important;">
+                        <!-- <h3 class="mdc-list-group__subheader">List 1</h3>  -->
+                        <div class="mdc-list listagrupo1">
+                            <div role="separator" class="mdc-list-divider" style="margin-top: 2px; margin-bottom: 2px;">
+                            </div>
+                            <a class="mdc-list-item mdc-ripple-upgraded"
+                                href="https://lettres-calvin.rarebook-ubfc.fr/fr-preface/" tabindex="-1">
+                                <span class="mdc-list-item__ripple"></span>
+                                <span class="mdc-list-item__primary-text">Préface par Jules Bonnet (1854)</span>
+                            </a>
+                            <a class="mdc-list-item mdc-ripple-upgraded"
+                                href="https://lettres-calvin.rarebook-ubfc.fr/fr/vie-et-oeuvre/"
+                                tabindex="-1">
+                                <span class="mdc-list-item__ripple"></span>
+                                <span class="mdc-list-item__primary-text">Vie et œuvre</span>
+                            </a>
+                            <a class="mdc-list-item mdc-ripple-upgraded" style="align-items: center;" href="#"
+                                tabindex="-1">
+                                <span class="mdc-list-item__ripple"></span>
+                                <span class="mdc-list-item__primary-text"> Contexte historique</span>
+                                <span
+                                    style="position: absolute; right: 0px; --mdc-ripple-fg-size: 0px; --mdc-ripple-fg-scale: NaN; --mdc-ripple-left: 0px; --mdc-ripple-top: 0px;"
+                                    class="submenu2 mdc-icon-button mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                                    aria-label="Opciones" data-aria-label-on="Ocultar Opciones"
+                                    data-aria-label-off="Mostrar Opciones">
+                                    <div class="mdc-icon-button__ripple"></div>
+                                    <i
+                                        class="material-icons mdc-list-item__graphic mdc-icon-button__icon mdc-icon-button__icon--on">arrow_drop_up</i>
+                                    <i
+                                        class="material-icons mdc-list-item__graphic mdc-icon-button__icon">arrow_drop_down</i>
+                                </span>
+                            </a>
+                            <div class="submenu2grupo mdc-list mdc-list-group" style="display:none!important;">
+                                <!-- <h3 class="mdc-list-group__subheader">List 1</h3>  -->
+                                <div role="separator" class="mdc-list-divider"
+                                    style="margin-top: 2px; margin-bottom: 2px;">
+                                </div>
+                                <div class="mdc-list listagrupo2">
+                                    <a class="mdc-list-item mdc-ripple-upgraded"
+                                        href="https://lettres-calvin.rarebook-ubfc.fr/fr-noms/" tabindex="-1">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <span class="mdc-list-item__primary-text">Noms</span>
+                                    </a>
+                                    <a class="mdc-list-item mdc-ripple-upgraded"
+                                        href="https://lettres-calvin.rarebook-ubfc.fr/fr-endroits/" tabindex="-1">
+                                        <span class="mdc-list-item__ripple"></span>
+                                        <span class="mdc-list-item__primary-text">Endroits</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div role="separator" class="mdc-list-divider" style="margin-top: 2px; margin-bottom: 2px;">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="mdc-list-item mdc-ripple-upgraded"
+                        href="https://lettres-calvin.rarebook-ubfc.fr/fr-lettres-francaises/" tabindex="-1">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__primary-text"> Lettres françaises</span>
+                    </a>
+                    <a class="mdc-list-item mdc-ripple-upgraded"
+                        href="https://lettres-calvin.rarebook-ubfc.fr/fr-recherche/" tabindex="-1">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__primary-text"> Recherche</span>
+                    </a>
+                    <a class="mdc-list-item mdc-ripple-upgraded"
+                        href="https://lettres-calvin.rarebook-ubfc.fr/fr-about/" tabindex="-1">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__primary-text"> À propos</span>
+                    </a>
+                    <a class="mdc-list-item mdc-ripple-upgraded" href="mailto:yhranlo@gmail.com" tabindex="-1">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__primary-text"> Contact</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+
+    <div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust"> </div>
+
+    <div class="mdc-drawer-scrim mdc-top-app-bar--fixed-adjust"></div>
+
+    <span class="S1" style="padding-top:0px!important;margin-top:-35px!important;">
+        <div>
+            <div id="drag-container1">
+                <div id="spin-container1">
+                    <!-- Add your cards here -->
+                    <div class="manuscrito">
+                        <a
+                            href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/04/24/lettre-aux-seigneurs-de-geneve-fr/">
+                            <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                                <!-- content within actionable area -->
+
+                                <div class="mdc-card__ripple"></div>
+                                <div class="lettre-card__title mdc-typography--headline6">
+                                    Aux Seigneurs de Genève
+                                </div>
+                                <div class="lettre1-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+
+                                </div>
+                                <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                                    19 février 1541
+                                </div>
+                                <div class="lettre-card__secondary--body mdc-typography--caption">
+                                  Calvin explique les raisons de son arrivée tardive
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="manuscrito">
+                        <a href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/03/21/lettre-a-louis-du-tillet-fr/">
+                            <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                                <!-- content within actionable area -->
+
+                                <div class="mdc-card__ripple"></div>
+                                <div class="lettre-card__title mdc-typography--headline6">
+                                  À Louis du Tillet
+                                </div>
+                                <div class="lettre2-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                                </div>
+                                <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                                    31 janvier 1538
+                                </div>
+                                <div class="lettre-card__secondary--body mdc-typography--caption">
+                                  Réaction de Calvin au retour de Tillet à la foi catholique
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="manuscrito">
+                        <a href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/06/25/sirs-neuchatel-1541/">
+                            <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                                <!-- content within actionable area -->
+
+                                <div class="mdc-card__ripple"></div>
+                                <div class="lettre-card__title mdc-typography--headline6">
+                                   Aux Seigneurs de Neuchâtel
+                                </div>
+                                <div class="lettre3-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                                </div>
+                                <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                                    29 septembre 1541
+                                </div>
+                                <div class="lettre-card__secondary--body mdc-typography--caption">
+                                Intercession du conseil de Genève en faveur de Guillaume Farel
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="manuscrito">
+                        <a
+                            href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/07/12/lettre-a-la-duchesse-de-ferrare-octobre-1541-fr/">
+                            <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                                <!-- content within actionable area -->
+
+                                <div class="mdc-card__ripple"></div>
+                                <div class="lettre-card__title mdc-typography--headline6">
+                                 À la duchesse de Ferrare
+                                </div>
+                                <div class="lettre4-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                                </div>
+                                <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                                  octobre 1541
+                                </div>
+                                <div class="lettre-card__secondary--body mdc-typography--caption">
+                                  Calvin instruit des erreurs de la messe
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="manuscrito">
+                        <a href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/07/25/lettre-a-monsieur-le-cure-mai-1542/">
+                            <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                                <!-- content within actionable area -->
+
+                                <div class="mdc-card__ripple"></div>
+                                <div class="lettre-card__title mdc-typography--headline6">
+                                  À Monsieur le curé de *
+                                </div>
+                                <div class="lettre5-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                                </div>
+                                <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                                  [mai 1542]
+                                </div>
+                                <div class="lettre-card__secondary--body mdc-typography--caption">
+                                Défense de la doctrine de l’église réformée
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="manuscrito">
+                        <a href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/07/27/monsieur-de-falais-14-octobre-1543/">
+                            <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                                <!-- content within actionable area -->
+
+                                <div class="mdc-card__ripple"></div>
+                                <div class="lettre-card__title mdc-typography--headline6">
+                                 À Monsieur de Falais
+                                </div>
+                                <div class="lettre6-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                                </div>
+                                <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                                  14 octobre 1543
+                                </div>
+                                <div class="lettre-card__secondary--body mdc-typography--caption">
+                                Calvin donne son conseil à Monsieur de Falais
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="manuscrito">
+                        <a
+                            href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/07/30/a-madame-de-falais-14-octobre-1543/">
+                            <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                                <!-- content within actionable area -->
+
+                                <div class="mdc-card__ripple"></div>
+                                <div class="lettre-card__title mdc-typography--headline6">
+                                 À Madame de Falais
+                                </div>
+                                <div class="lettre7-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                                </div>
+                                <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                                  14 octobre [1543]
+                                </div>
+                                <div class="lettre-card__secondary--body mdc-typography--caption">
+                                  Encouragement de Calvin à Mme. de Falais
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="manuscrito">
+                        <a href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/05/lettre-a-monsieur-de-falais-fin-1543/">
+                            <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                                <!-- content within actionable area -->
+
+                                <div class="mdc-card__ripple"></div>
+                                <div class="lettre-card__title mdc-typography--headline6">
+                                 À Monsieur de Falais
+                                </div>
+                                <div class="lettre8-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                                </div>
+                                <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                                  fin 1543
+                                </div>
+                                <div class="lettre-card__secondary--body mdc-typography--caption">
+                                  Encouragement à Monsieur de Falais pour vaincre ses dernières hésitations
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="manuscrito">
+                        <a
+                            href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/05/lettre-a-madame-de-bude-20-1546/">
+                            <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                                <!-- content within actionable area -->
+
+                                <div class="mdc-card__ripple"></div>
+                                <div class="lettre-card__title mdc-typography--headline6">
+                                 À Madame de Budé
+                                </div>
+                                <div class="lettre9-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                                </div>
+                                <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                                  20 ** [1546]
+                                </div>
+                                <div class="lettre-card__secondary--body mdc-typography--caption">
+                                Calvin lui conseille de se retirer à Genève
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="manuscrito">
+                        <a href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/05/lettre-a-madame-de-falais-24-juin-1544/">
+                            <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                                <!-- content within actionable area -->
+
+                                <div class="mdc-card__ripple"></div>
+                                <div class="lettre-card__title mdc-typography--headline6">
+                                 À Madame de Falais
+                                </div>
+                                <div class="lettre10-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                                </div>
+                                <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                                  24 juin 1544
+                                </div>
+                                <div class="lettre-card__secondary--body mdc-typography--caption">
+                                  Encouragement à Madame de Falais qui suit son mari à Cologne et à Strasbourg
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="manuscrito">
+                      <a href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/07/lettre-a-un-nouveau-converti-13-juin-1548/">
+                          <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                              <!-- content within actionable area -->
+
+                              <div class="mdc-card__ripple"></div>
+                              <div class="lettre-card__title mdc-typography--headline6">
+                               À un nouveau converti
+                              </div>
+                              <div class="lettre11-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                              </div>
+                              <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                                13 juin 1548
+                              </div>
+                              <div class="lettre-card__secondary--body mdc-typography--caption">
+                              Réponse à une question sur la messe et encouragement dans la foi
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="manuscrito">
+                    <a href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/07/lettre-aux-seigneurs-de-geneve-6-octobre-1552/">
+                        <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                            <!-- content within actionable area -->
+
+                            <div class="mdc-card__ripple"></div>
+                            <div class="lettre-card__title mdc-typography--headline6">
+                              Aux Seigneurs de Genève
+                            </div>
+                            <div class="lettre12-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                            </div>
+                            <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                              6 octobre 1552
+                            </div>
+                            <div class="lettre-card__secondary--body mdc-typography--caption">
+                              Réponse aux accusations de Jean Trolliet
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="manuscrito">
+                  <a href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/07/lettre-a-monsieur-de-falais-1552/">
+                      <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                          <!-- content within actionable area -->
+
+                          <div class="mdc-card__ripple"></div>
+                          <div class="lettre-card__title mdc-typography--headline6">
+                           À Monsieur de Falais
+                          </div>
+                          <div class="lettre13-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                          </div>
+                          <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                            1552
+                          </div>
+                          <div class="lettre-card__secondary--body mdc-typography--caption">
+                            Dernière lettre de Calvin à M. de Falais
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="manuscrito">
+                <a href="https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/07/lettre-au-roi-dangleterre-12-mars-1553/">
+                    <div class="mdc-card lettre-card mdc-card__primary-action" tabindex="0">
+                        <!-- content within actionable area -->
+
+                        <div class="mdc-card__ripple"></div>
+                        <div class="lettre-card__title mdc-typography--headline6">
+                         Au roi d’Angleterre
+                        </div>
+                        <div class="lettre14-card__media mdc-card__media mdc-card__media--16-9 mdc-elevation--z4">
+                        </div>
+                        <div class="lettre-card__subtitle mdc-typography--subtitle2">
+                          12 mars 1553
+                        </div>
+                        <div class="lettre-card__secondary--body mdc-typography--caption">
+                        Intercession en faveur d’un gentilhomme persécuté pour la religion
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+                    <span style="margin-left: auto;margin-right: auto;">
+                        <img class="fotocalvin"
+                            src="https://lettres-calvin.rarebook-ubfc.fr/wp-content/uploads/2022/02/Jean-Calvin.jpg"
+                            alt="Calvin" width="80px" height="auto">
+                        <!-- <h5>Cerrar</h5> -->
+                    </span>
+                    <!-- Text at center of ground -->
+                    <div class="texto">
+                        <div class="mdc-typography--headline2">
+                            Jean Calvin
+                        </div>
+                        <div class="mdc-typography--headline4">
+                            Correspondance française
+                        </div>
+                    </div>
+                </div>
+                <div id="groundy1"></div>
+            </div>
+        </div>
+    </span>
+
+</div>
+<!--
+
+<div style=";">
+<img src="https://lettres-calvin.rarebook-ubfc.fr/wp-content/uploads/2022/04/Calvin1.jpg" alt="Calvin" width="300px" height="300px">
+</div>
+-->
+<!--
+<div class="bbody">
+<aside class="mdc-drawer-app-content mdc-top-app-bar--prominent-fixed-adjust">
+    <div class="main-content" id="main-content">
+        <img class="bgim"
+            src="https://lettres-calvin.rarebook-ubfc.fr/wp-content/uploads/2021/12/reformers-wall-scaled-e1639258646663.jpg"
+            alt="Fondo" id="myimagen">
+    </div>
+</aside>
+</div>
+-->
+<script src="https://unpkg.com/material-components-web@13.0.0/dist/material-components-web.min.js">
+</script>
+<script type="text/javascript">
+    /** Initialize MDC Web components. */
+    // Instantiation
+    window.mdc.autoInit();
+
+    var buttons = document.querySelectorAll('.mdc-button, .mdc-fab');
+    for (var i = 0, button; button = buttons[i]; i++) {
+        mdc.ripple.MDCRipple.attachTo(button);
+    }
+
+    var nodes = document.querySelectorAll('.mdc-icon-toggle');
+    for (var i = 0, node; node = nodes[i]; i++) {
+        mdc.iconToggle.MDCIconToggle.attachTo(node);
+    }
+
+    var interactiveListItems = document.querySelectorAll('.mdc-list-item');
+    for (var i = 0, li; li = interactiveListItems[i]; i++) {
+        mdc.ripple.MDCRipple.attachTo(li);
+        // Prevent link clicks from jumping demo to the top of the page
+        //.addEventListener('click', function(evt) {
+        //evt.preventDefault();
+        //});
+    }
+
+    //const submenu2BotRippleEl = document.querySelector('.submenu2');
+    //const submenu2BotRipple = mdc.ripple.MDCRipple.attachTo(submenu2BotRippleEl);
+    //submenu2BotRipple.unbounded = true;
+
+    //const submenu1BotRippleEl = document.querySelector('.submenu1');
+    //const submenu1BotRipple = mdc.ripple.MDCRipple.attachTo(submenu1BotRippleEl);
+    //submenu1BotRipple.unbounded = true;
+
+    const drawerElement = document.querySelector('.mdc-drawer');
+    const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+
+    const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+    const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(topAppBarElement);
+    /*topAppBar.setScrollTarget(document.getElementById('main-content'));*/
+    topAppBar.listen('MDCTopAppBar:nav', () => {
+        drawer.open = !drawer.open;
+    });
+
+    const bCerrar = document.querySelector('.bcerrar');
+    bCerrar.addEventListener('click', () => {
+        drawer.open = !drawer.open;
+    });
+
+    const submenu1BotEl = document.querySelector('.submenu1');
+    const submenu1Bot = mdc.iconButton.MDCIconButtonToggle.attachTo(submenu1BotEl);
+    const submenu1GrupoEl = document.querySelector('.submenu1grupo');
+    submenu1BotEl.addEventListener('click', () => {
+        if (submenu1GrupoEl.style.display == 'block') {
+            submenu1GrupoEl.style.display = 'none';
+            //Hay que simular un click en submenu2
+            //submenu2GrupoEl.style.display = 'none';
+            if (submenu2GrupoEl.style.display == 'block') {
+                submenu2BotEl.click();
+            }
+        }
+        else {
+            submenu1GrupoEl.style.display = 'block';
+        }
+    });
+
+    const submenu2BotEl = document.querySelector('.submenu2');
+    const submenu2Bot = mdc.iconButton.MDCIconButtonToggle.attachTo(submenu2BotEl);
+    const submenu2GrupoEl = document.querySelector('.submenu2grupo');
+    submenu2BotEl.addEventListener('click', () => {
+        if (submenu2GrupoEl.style.display == 'block') {
+            submenu2GrupoEl.style.display = 'none';
+        }
+        else {
+            submenu2GrupoEl.style.display = 'block';
+        }
+    });
+
+    const menuIdiomaEl = document.querySelector('.menu-idioma');
+    const menuIdioma = new mdc.menu.MDCMenu(menuIdiomaEl);
+    const idiomaSelectEl = document.querySelector('.idioma-select');
+    idiomaSelectEl.addEventListener('click', (event) => {
+        menuIdioma.open = !menuIdioma.open;
+    });
+</script>
+<script>
+    // You can change global variables here:
+    var radius = 400; // how big of the radius
+    var autoRotate = true; // auto rotate or not
+    var rotateSpeed = -6; // unit: seconds/360 degrees
+    var imgWidth = 275; // width of images (unit: px)
+    var imgHeight = 280; // height of images (unit: px)
+
+
+    var odrag = document.getElementById('drag-container1');
+    var ospin = document.getElementById('spin-container1');
+    var aImg = ospin.getElementsByClassName('manuscrito');
+
+    //Define la cantidad de numeros aleatorios.
+    var cantidadNumeros = aImg.length;
+    var aleaArreglo = [];
+    var aAleManusc = [];
+    var totElem = aImg.length;
+
+    var maxCantidad = 8;
+
+    var manuscritoInicial = 0;
+    aProcesar = totElem;
+    if (aProcesar > maxCantidad) {
+        aProcesar = maxCantidad;
+    }
+    var aEle = [aProcesar];
+
+    var sX, sY, nX, nY, desX = 0,
+        desY = 0,
+        tX = 0,
+        tY = 10;
+
+    // Size of images
+    ospin.style.width = imgWidth + "px";
+    ospin.style.height = imgHeight + "px";
+
+    // Size of ground - depend on radius
+    var groundy = document.getElementById('groundy1');
+    groundy.style.width = radius * 3 + "px";
+    groundy.style.height = radius * 3 + "px";
+
+    var j = 0;
+    var listaCompletada = "no";
+
+    //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_animationstart
+
+    // Code for Chrome, Safari and Opera
+    ospin.addEventListener("webkitAnimationStart", lettresAnimationStartFunction);
+    ospin.addEventListener("webkitAnimationIteration", lettresAnimationRepeatFunction);
+    ospin.addEventListener("webkitAnimationEnd", lettresAnimationEndFunction);
+
+    // Standard syntax
+    ospin.addEventListener("animationstart", lettresAnimationStartFunction);
+    ospin.addEventListener("animationiteration", lettresAnimationRepeatFunction);
+    ospin.addEventListener("animationend", lettresAnimationEndFunction);
+
+    ////////////////////////////
+
+    tarjetasAleatorias();
+
+    manuscritoInicial = j;
+
+    // ===================== start =======================
+    // animation start after 1000 miliseconds
+    setTimeout(init, 1000);
+
+    var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
+    var nombreClase = (rotateSpeed > 0 ? 'girar' : 'girarInverso');
+    var cGirar = "";
+
+    if (autoRotate) {
+        ospin.classList.add(`${nombreClase}`);
+        cGirar = ospin.getElementsByClassName(`${nombreClase}`);
+    }
+
+    // setup events
+    document.onpointerdown = function (e) {
+        clearInterval(odrag.timer);
+        e = e || window.event;
+        var sX = e.clientX,
+            sY = e.clientY;
+
+        this.onpointermove = function (e) {
+            e = e || window.event;
+            var nX = e.clientX,
+                nY = e.clientY;
+            desX = nX - sX;
+            desY = nY - sY;
+            tX += desX * 0.1;
+            tY += desY * 0.1;
+            applyTranform(odrag);
+            sX = nX;
+            sY = nY;
+        };
+
+        this.onpointerup = function (e) {
+            odrag.timer = setInterval(function () {
+                desX *= 0.95;
+                desY *= 0.95;
+                tX += desX * 0.1;
+                tY += desY * 0.1;
+                applyTranform(odrag);
+                playSpin(false);
+                if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+                    clearInterval(odrag.timer);
+                    playSpin(true);
+                }
+            }, 17);
+            this.onpointermove = this.onpointerup = null;
+        };
+
+        return false;
+    };
+
+    document.onmousewheel = function (e) {
+        e = e || window.event;
+        var d = e.wheelDelta / 20 || -e.detail;
+        radius += d;
+        init(1);
+    };
+
+    function lettresAnimationStartFunction() {
+    }
+
+    function lettresAnimationRepeatFunction() {
+    }
+
+    function lettresAnimationEndFunction() {
+
+        for (var i = 0; i < aImg.length; i++) {
+            aImg[i].style.transition = "transform 1s";
+            aImg[i].style.transitionDelay = "0s";
+            aImg[i].style.transform = "translateZ(0px)";
+        }
+
+        const myTimeout = setTimeout(desaparecerAparecerTarjetas, 995);
+    }
+
+    function init(delayTime) {
+        for (var i = 0; i < aEle.length; i++) {
+            aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
+            aEle[i].style.transition = "transform 1s";
+            aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
+        }
+    }
+    function demora(milisegundos) {
+        const date = Date.now();
+        let currentDate = null;
+        do {
+            currentDate = Date.now();
+        } while (currentDate - date < milisegundos);
+    }
+
+    function tarjetasAleatorias() {
+        while (aleaArreglo.length < cantidadNumeros) {
+            var numeroAleatorio = Math.ceil(Math.random() * cantidadNumeros);
+            var existe = false;
+            for (var i = 0; i < aleaArreglo.length; i++) {
+                if (aleaArreglo[i] == numeroAleatorio) {
+                    existe = true;
+                    break;
+                }
+            }
+            if (!existe) {
+                aleaArreglo[aleaArreglo.length] = numeroAleatorio;
+            }
+        }
+        for (var i = 0; i < cantidadNumeros; i++) {
+            aAleManusc[i] = aImg[aleaArreglo[i] - 1];
+        }
+        for (var i = 0; i < totElem; i++) {
+            aAleManusc[i].style.display = "none";
+        }
+        for (var i = 0; i < aProcesar; i++) {
+            if ((manuscritoInicial + i) < totElem) {
+                aAleManusc[(manuscritoInicial + j)].style.display = "block";
+                aEle[i] = aAleManusc[(manuscritoInicial + j)];
+            }
+            else {
+                if ((manuscritoInicial + i) > totElem) {
+                    aAleManusc[(manuscritoInicial + j)].style.display = "block";
+                    aEle[i] = aAleManusc[(manuscritoInicial + j)];
+                }
+                else {
+                    manuscritoInicial = 0;
+                    j = 0;
+                    listaCompletada = "si";
+                    aAleManusc[(manuscritoInicial + j)].style.display = "block";
+                    aEle[i] = aAleManusc[(manuscritoInicial + j)];
+                }
+            }
+            j++;
+        }
+    }
+
+    function desaparecerAparecerTarjetas(pDemora) {
+
+        if (listaCompletada == "si") {
+            listaCompletada = "no";
+            j = 0;
+            aleaArreglo = [];
+            aAleManusc = [];
+            totElem = aImg.length;
+            manuscritoInicial = 0;
+
+            tarjetasAleatorias();
+            manuscritoInicial = j;
+        }
+
+        //for (var i = 0; i < aEle.length; i++) {
+        //    aEle[i].style.display = "none";
+        //}
+        for (var i = 0; i < aImg.length; i++) {
+            aImg[i].style.display = "none";
+        }
+
+        demora(pDemora);
+        j = 0;
+        for (var i = 0; i < aProcesar; i++) {
+            if ((manuscritoInicial + i) < totElem) {
+                aAleManusc[(manuscritoInicial + j)].style.display = "block";
+                aEle[i] = aAleManusc[(manuscritoInicial + j)];
+            }
+            else {
+                if ((manuscritoInicial + i) > totElem) {
+                    aAleManusc[(manuscritoInicial + j)].style.display = "block";
+                    aEle[i] = aAleManusc[(manuscritoInicial + j)];
+                }
+                else {
+                    manuscritoInicial = 0;
+                    j = 0;
+                    listaCompletada = "si";
+                    aAleManusc[(manuscritoInicial + j)].style.display = "block";
+                    aEle[i] = aAleManusc[(manuscritoInicial + j)];
+                }
+            }
+            j++;
+        }
+
+        setTimeout(init, pDemora);
+        if (autoRotate) {
+            ospin.classList.remove(`${nombreClase}`);
+            animationName = (animationName == 'spinRevert' ? 'spin' : 'spinRevert');
+            nombreClase = (nombreClase == 'girarInverso' ? 'girar' : 'girarInverso');
+            void (ospin.offsetHeight);
+            ospin.classList.add(`${nombreClase}`);
+            cGirar = ospin.getElementsByClassName(`${nombreClase}`);
+        }
+    }
+
+    function applyTranform(obj) {
+        // Constrain the angle of camera (between 0 and 180)
+        if (tY > 180) tY = 180;
+        if (tY < 0) tY = 0;
+
+        // Apply the angle
+        obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
+    }
+
+    function playSpin(yes) {
+        ospin.style.animationPlayState = (yes ? 'running' : 'paused');
+    }
+</script>
