@@ -1,0 +1,60 @@
+{          
+    "storymap": {
+        "language": "fr",          
+        "map_type": "stamen:toner",          
+        "map_as_image": false,       
+        "map_subdomains": "",        
+          
+        "slides": [
+            {
+                "type": "overview",      
+                "location": {
+                    "name":"Europe",    
+                    "lat": 54.5260,         
+                    "lon": 15.255    
+                },
+                "text": {                
+                    "headline": "s.l.",
+                "text": "<ul><li><a href='https://lettres-calvin.rarebook-ubfc.fr/fr/2022/07/25/lettre-a-monsieur-le-cure-mai-1542/' style='color:#ffffe'>À Monsieur le curé de ** [mai 1542]</a><p>Défense de la doctrine de l’église réformée contre l’accusation d’être la cause de la peste à Genève.<br/>Instruction de recourir à Dieu seul pour la délivrance.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/fr/2022/07/27/monsieur-de-falais-14-octobre-1543/' style='color:#ffffe'>À Monsieur de Falais [14 octobre 1543]</a><p>Calvin donne son conseil à Monsieur de Falais qui délibérait de quitter les Pays-Bas.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/fr/2022/07/30/a-madame-de-falais-14-octobre-1543/' style='color:#ffffe'>À Madame de Falais (14 octobre [1543])</a><p>Encouragement de Calvin à Madame de Falais qui partageait les sentiments de son époux.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/05/lettre-a-monsieur-de-falais-fin-1543/' style='color:#ffffe'>À Monsieur de Falais (fin 1543)</a><p>Encouragement à Monsieur de Falais pour vaincre ses dernières hésitations concernant son exil volontaire.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/05/lettre-a-madame-de-falais-24-juin-1544/' style='color:#ffffe'>À Madame de Falais (24 juin 1544)</a><p>Encouragement à Madame de Falais dans sa nouvelle vie en liberté de conscience et de culte, après avoir suit son mari à Cologne et à Strasbourg.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/05/lettre-a-madame-de-bude-20-1546/' style='color:#ffffe'>À Madame de Budé (20 ** [1546])</a><p>Calvin lui conseille de se retirer à Genève.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/07/lettre-aux-seigneurs-de-geneve-6-octobre-1552/' style='color:#ffffe'>Aux Seigneurs de Genève (6 octobre 1552)</a><p>Réponse de Calvin aux accusations de Jean Trolliet concernant sa doctrine.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/07/lettre-a-monsieur-de-falais-1552/' style='color:#ffffe'>À Monsieur de Falais (1552)</a><p>Dernière lettre de Calvin à M. de Falais. Rupture de Calvin avec lui quand ce dernier prit ouvertement le parti de Bolsec.</p></li></ul>"
+                }
+            },
+            {
+                      
+                "location": {
+                    "name":"Genève",    
+                    "lat": 46.2043907,         
+                    "lon": 6.1431577    
+                },
+                "text": {                
+                    "headline": "De Genève",
+                "text": "<ul><li><a href='https://lettres-calvin.rarebook-ubfc.fr/2022/03/21/lettre-a-louis-du-tillet-fr/' style='color:#ffffe'>À Louis du Tillet (31 janvier 1538)</a><p>Réponse de Jean Calvin à Louis de Tillet après avoir reçu sa lettre en l'informant de sa décision de retourner à la foi catholique.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/fr/2022/06/25/sirs-neuchatel-1541/' style='color:#ffffe'>Aux Seigneurs de Neuchâtel (29 septembre 1541)</a><p>Lettre de la part des ministres de Genève, y compris Calvin, adressée à ceux de Nauchâtel afin de les persuader de ne pas déposer Guillaume Farel après avoir censuré publiquement une dame de qualité. Cette lettre a été portée par Pierre Viret et contient des instructions de Calvin pour son intervention devant la seigneurie de Neuchâtel.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/fr/2022/07/12/lettre-a-la-duchesse-de-ferrare-octobre-1541-fr/' style='color:#ffffe'>À la duchesse de Ferrare (octobre 1541)</a><p>Calvin instruit des erreurs de la messe.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/07/lettre-a-un-nouveau-converti-13-juin-1548/' style='color:#ffffe'>À un nouveau converti (13 juin 1548)</a><p>Réponse à une question sur la messe et encouragement dans la foi.</p></li><li><a href='https://lettres-calvin.rarebook-ubfc.fr/fr/2022/08/07/lettre-au-roi-dangleterre-12-mars-1553/' style='color:#ffffe'>Au roi d’Angleterre (12 mars 1553)</a><p>Intercession de Calvin auprès le roi d'Angleterre en faveur d'un gentilhomme persécuté pour la religion.</p></li></ul>"
+                },
+                "media": {               
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Escalade-battle-2.jpg",
+                    "caption": "<p title='Eau-forte rehaussée à l&#39;aquarelle, 194 x 291 mm, au trait carré, 256 x 327 mm, à la feuille, (BPU, inv. la 2200 Rés, pl. 99).'>Geneva Urbs, vers 1603, Matthias Quad (1557 - après 1608)</p>",
+                    "credit": "<p>Photocopiée depuis la page 183 de l'œuvre « Journal du temps de l'Escalade » par Slatkine, 2002 Genève.</p>"
+                }
+            },
+            {
+                      
+                "location": {  
+                    "name":"Strabourg",   
+                    "lat": 48.5734053,         
+                    "lon": 7.7521113    
+                },
+                "text": {                
+                    "headline": "De Strasbourg",
+                    "text": "<ul><li><a href='https://lettres-calvin.rarebook-ubfc.fr/2022/04/24/lettre-aux-seigneurs-de-geneve-fr/' style='color:#ffffe'>Aux Seigneurs de Genève (19 février 1541)</a><p>Dans le contexte du colloque de Ratisbonne, qui fut un important débat théologique entre les catholiques et les protestants, Jean Calvin, après avoir été appelé par Guillaume Farel à retourner à Genève, explique les raisons de son arrivée tardive et réaffirme son engagement avec l’église.</p></li></ul>"  
+                },
+                "media": {               
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Absolute_Strasbourg_1644_Merian_01.jpg",       
+                    "caption": "<p>Plan de Strasbourg de 1644 selon Merian</p>",
+                    "credit": "<p>Auteur: Jonathan M</p>"
+                }
+            }
+
+            
+        ]           
+    }
+}
+
